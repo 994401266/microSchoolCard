@@ -18,7 +18,7 @@
     "pages/about/about",
     "pages/getUserInfo/getUserInfo"
   ],
-  "subPackagess": [
+  "subPackagesss": [
     {
       "root": "pagesEdu",
       "pages": [
