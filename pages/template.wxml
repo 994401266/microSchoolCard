@@ -1,0 +1,6 @@
+<template name="logo">
+  <view class='logoWrap'>
+    <image src='../../image/logo.jpg'></image>
+    <text>微校名片</text>
+  </view>
+</template>

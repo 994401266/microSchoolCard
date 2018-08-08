@@ -1,0 +1,23 @@
+<!--pagesEdu/pages/campusDetail/campusDetail.wxml-->
+<view class='campusList employList'>
+  <view class='listTitle'>
+   <image src='../../image/campus.png'></image>
+    金水校区(14)
+  </view>
+  <view class='listItem'>
+    <view class='imgLeft'>
+      <image src='../../image/slogo.png'></image>
+    </view>
+    <view class='textCenter'>
+      <view class='orgName'>成员姓名</view>
+      <view class='orgSize'>成员职位</view>
+    </view>
+    <view class='editRight'>
+      <image src='../../image/edit.png'></image>
+    </view>
+  </view>
+</view>
+<view class='footer'>
+  <button>班级校区</button>
+  <button open-type='share'>添加员工</button>
+</view>

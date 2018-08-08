@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pagesEdu/pages/register/register",
+    "pagesEdu/pages/addCampus/addCampus",
+    "pagesEdu/pages/schoolInfo/schoolInfo",
+    "pagesEdu/pages/employEdit/employEdit",
+    "pagesEdu/pages/schoolSet/schoolSet",
+    "pagesEdu/pages/campusDetail/campusDetail",
+    "pagesEdu/pages/adminSet/adminSet",
+    "pagesEdu/pages/index/index",
+    "pages/card/card",
+    "pages/record/record",
+    "pages/poster/poster",
+    "pages/mycard/mycard",
+    "pages/user/user",
+    "pages/code/code",
+    "pages/about/about",
+    "pages/getUserInfo/getUserInfo"
+  ],
+  "subPackagess": [
+    {
+      "root": "pagesEdu",
+      "pages": [
+        "pages/adminSet/adminSet",
+        "pages/campusDetail/campusDetail",
+        "pages/employEdit/employEdit",
+        "pages/register/register",
+        "pages/schoolInfo/schoolInfo",
+        "pages/schoolSet/schoolSet",
+        "pages/addCampus/addCampus",
+        "pages/index/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#06d995",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "微校名片"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "名片夹",
+        "iconPath": "image/footer_reslut.png",
+        "selectedIconPath": "image/footer_reslut_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "image/footer_user.png",
+        "selectedIconPath": "image/footer_user_active.png"
+      }
+    ],
+    "backgroundColor": "#fff",
+    "color": "#ccc",
+    "selectedColor": "#06d995",
+    "borderStyle": "dark"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

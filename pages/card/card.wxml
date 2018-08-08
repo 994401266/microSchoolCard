@@ -1,0 +1,98 @@
+<!--pages/card/card.wxml-->
+<view class="cardList">
+    <view class="cardWrap clearfix">
+      <!-- <image class="cardBG" src="../../image/cardbg.jpg"></image> -->
+    <view class="listAvatar">
+      <image src="{{user.avatar}}"></image>
+    </view>
+    <view class="listInfo">
+      <view class="userName">
+        {{user.name}}
+        <view class='post'>{{user.job}}</view>
+      </view>
+      <view class='text' style='margin-bottom: 20rpx;'>{{user.company}}</view>
+      <view class='text'>手机 <text class="mobile" catchtap='call' data-mobile='{{user.phone}}'>{{user.phone}}</text></view>
+      <text class='text' style='width: 630rpx;text-overflow: inherit;'>地址 {{user.place}}</text>
+    </view>
+    <view class='getMoreInfo' catchtap='showMore' wx:if="{{!showFlag}}">更多名片信息 <text class='arrowUp'></text></view>
+      <view class='getMoreInfo' catchtap='showMore'  wx:if="{{showFlag}}">更多名片信息 <text class='arrowDown'></text></view>
+    <view class="subInfo" wx:if="{{showFlag}}">
+      <view>
+        <text class="tag">电话</text>
+        <text class="desText">{{user.phone}}</text>
+        <image src='../../image/mobile.png' catchtap='call' data-mobile='{{user.phone}}'></image>
+      </view>
+      <view>
+        <text class="tag">微信</text>
+        <text class="desText">{{user.wxId}}</text>
+        <image src='../../image/wechat.png' catchtap='copy' data-text='{{user.wxId}}'></image>
+      </view>
+      <view>
+        <text class="tag">邮箱</text>
+        <text class="desText">{{user.mail}}</text>
+        <image src='../../image/email.png' catchtap='copy' data-text='{{user.mail}}'></image>
+      </view>
+      <view>
+        <text class="tag">城市</text>
+        <text class="desText">{{user.city}}</text>
+        <image src='../../image/city.png' catchtap='copy' data-text='{{user.city}}'></image>
+      </view>
+
+    </view>
+  </view>
+</view>
+<!-- <view bindtap='removeSto'>清除缓存</view> -->
+<view wx:if="{{isMyCard && cardHolderId}}" class='btnWrap clearfix'>
+  <button bindtap='deleteCard' class='deleteBtn'>删除</button>
+  <button bindtap='saveCard' class='saveBtn'>保存通讯录</button>
+</view>
+<view wx:else>
+  <button bindtap='saveCard' class='saveBtn'>保存通讯录</button>
+</view>
+
+
+<!-- <view class="cardList">
+  <view class="cardWrap clearfix">
+    <image class="cardBG" src="../../image/cardbg.jpg"></image>
+    <view class="listAvatar">
+      <image src="{{user.avatar}}"></image>
+    </view>
+    <view class="listInfo">
+      <text class="userName">{{user.name}}</text>
+      <text>{{user.job}}</text>
+      <text>{{user.company}}</text>
+    </view>
+    <view class="subInfo">
+      <text>联系电话：{{user.phone}}</text>
+      <text>电子邮箱：{{user.mail}}</text>
+      <text>地址：{{user.city}}{{user.place}}</text>
+    </view>
+  </view>
+</view> -->
+<view class='divider'></view>
+<view class='tag'>介绍</view>
+<view class='introduce'>{{user.remark}}</view>
+<view style='font-size: 0;'>
+    <view class='imageWrap'>
+      <image wx:for="{{user.introImage}}" src="{{item}}" bindload='imageLoad' data-index="{{index}}" style='height:{{user.heightList[index]}};' bindtap='prevImage' data-url='{{item}}'></image>
+    </view>
+</view>
+
+<view class='footerPlace'></view>
+<!-- 没有名片且没有授权 -->
+<view class='footer threeBtn' wx:if="{{!hasCard}}">
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" data-to='index'>
+    <image src='../../image/index.png'></image>
+    名片夹
+  </button>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" data-to='mycard'>创建名片</button>
+  <button open-type="share">转发名片</button>
+</view>
+<!-- 名片且没有授权 -->
+<view class='footer' wx:else>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" data-to='index'>
+    <image src='../../image/index.png'></image>
+    名片夹
+  </button>
+  <button open-type="share">转发名片</button>
+</view>

@@ -1,0 +1,253 @@
+/**app.wxss**/
+body{
+  font-family: '微软雅黑';
+  font-size: 32rpx;
+  color: #333;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.userinfo-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  margin: 20rpx;
+  border-radius: 10%;
+}
+
+.userinfo-nickname {
+  color: #999;
+  font-size: 28rpx;
+  margin-right: auto;
+}
+
+.code{
+  width: 66rpx;
+  height: 66rpx;
+  margin-right: 10rpx;
+}
+.userinfo navigator{
+  border: 1px solid #f1f3f5;
+  width: 150rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  border-radius: 6rpx;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.divider{
+  background: #f1f3f5;
+  height: 20rpx;
+}
+.cardList{
+  padding: 20rpx;
+}
+.cardList>text{
+  color: #999;
+  font-size: 24rpx;
+}
+.cardList .gottenFrom{
+  margin-left: 20rpx;
+}
+.cardList .cardWrap{
+  border: 1px solid #f1f3f5;
+  padding: 30rpx 0rpx 20rpx 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+  box-shadow: 3px 5px 10px rgba(0,0,0,.15);
+  position: relative;
+}
+.cardList .cardWrap .cardBG{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.cardList .listAvatar{
+  width: 200rpx;
+  text-align: center;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 40rpx;
+}
+.cardList .listAvatar image{
+  width: 120rpx;
+  height: 120rpx;
+  box-shadow: 0 0 10px #fff;
+}
+.cardList .listInfo{
+  float: left;  
+  margin-left: 10rpx;
+}
+.cardList .listInfo .text{
+  display: block;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: #666;
+  line-height: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+  width: 450rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cardList .listInfo .userName{
+  font-size: 40rpx;
+  line-height: 56rpx;
+  color: #333;
+  font-weight: 500;
+}
+.cardList .listInfo .userName .post{
+  font-size: 30rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+  color: #666;
+}
+.cardList .subInfo{
+  width: 100%;
+  clear: both;
+  margin-top: 20rpx;
+}
+/* .cardList .subInfo text{
+  font-size: 24rpx;
+  color: #666;
+  display: block;
+  width: 650rpx;
+} */
+.placeholder{
+  color: #acacac;
+  font-size: 30rpx;
+}
+text.arrowDown{
+  display: inline-block;
+  border: 12rpx solid transparent;
+  border-top-width: 0;
+  border-bottom-color: #06d995;
+}
+text.arrowUp{
+  display: inline-block;
+  border: 12rpx solid transparent;
+  border-bottom-width: 0;
+  border-top-color: #06d995;
+}
+.logoWrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100rpx 0 20rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+.logoWrap image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 6rpx;
+  vertical-align: middle;
+}
+
+/* 授权弹窗的样式 */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-dialog .modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-dialog .modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-dialog .modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.modal-dialog .btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.modal-dialog .btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+.modal-dialog .btn-confirm button:after{
+  border: none;
+}
+/* 授权弹窗的样式end */
+.errorWrap{
+ text-align: center;
+}
+.errorWrap{
+  padding-top: 30%;
+}
+.nocontentImg{
+  display: block;
+  width: 280rpx;
+  height: 280rpx;
+  margin: 30rpx auto;
+}
+.errorWrap view{
+  color: #999;
+  font-size: 32rpx;
+  line-height: 2;
+}
+.errorWrap navigator{
+  display: inline;
+  color: #359eff
+}

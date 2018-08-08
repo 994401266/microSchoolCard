@@ -1,0 +1,74 @@
+<form>
+  <view class="baseInfo clearfix">
+    <view class="infoLeft" bindtap="changeAvatar">
+      <image wx:if="{{user.avatar}}" src="{{user.avatar}}"></image>
+      <image wx:else src="{{userInfo.avatarUrl}}"></image>
+      <image class="changeBtn" src="../../image/carema.png"></image>
+    </view>
+    <view class="infoRight">
+      <input wx:if="{{user.userName}}" value="{{user.userName}}" bindinput="changeName" placeholder='请输入名称' placeholder-class='placeholder'></input>
+      <input wx:else value="{{userInfo.nickName}}" bindinput="changeName" placeholder='请输入昵称' placeholder-class='placeholder'></input>
+      <view class="phoneWrap">
+         <input type='number' class="phone" value="{{user.phone}}" bindinput="changeMobile" placeholder='请点击获取手机号' placeholder-class='placeholder'></input>
+      <button  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 1231321</button>
+      </view>
+    </view>
+  </view>
+  <view class="divider"></view>
+  <view class="subInfo">
+    <view class="subInfoItem clearfix">
+      <text class="tag need">公司</text>
+      <input value="{{user.company}}" bindinput="changeCompany" placeholder='请输入公司名称' placeholder-class='placeholder'></input>
+    </view>
+    <view class="subInfoItem clearfix">
+      <text class="tag need">职位</text>
+      <input value="{{user.job}}" bindinput="changePost" placeholder='请输入职务' placeholder-class='placeholder'></input>
+    </view>
+    <view class="subInfoItem clearfix">
+      <text class="tag">微信号</text>
+      <input value="{{user.wxId}}" bindinput="changeWechat" placeholder-class='placeholder' placeholder='微信号'></input>
+    </view>
+    <view class="subInfoItem clearfix">
+      <text class="tag">邮箱</text>
+      <input value="{{user.mail}}" bindinput="changeEmail" placeholder='请输入邮箱' placeholder-class='placeholder'></input>
+    </view>
+    <!-- <view class="subInfoItem clearfix">
+      <text class="tag">城市</text>
+      <input value="{{user.city}}" bindinput="changeCity" placeholder='请输入所在城市' placeholder-class='placeholder'></input>
+    </view> -->
+    <view class="subInfoItem clearfix">
+      <text class="tag">城市</text>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          <!-- {{multiArray[0][multiIndex[0]]}} -->{{multiArray[1][multiIndex[1]]}}
+        </view>
+      </picker>
+    </view>
+    <view class="subInfoItem clearfix">
+      <text class="tag">地址</text>
+      <input value="{{user.place}}" bindinput="changeAddress" placeholder='请输入详细地址' placeholder-class='placeholder'></input>
+    </view>
+  </view>
+  <view class="divider"></view>
+  <view class="supInfo">
+    <text class="tag">更多</text>
+    <textarea maxlength='1000' value='{{user.remark}}' bindinput="changeRemark" placeholder='让别人更了解你...' placeholder-class='placeholder'></textarea>
+    <text class="tag">图片展示</text>
+    <view class="imageWrap"  wx:for="{{user.introImage}}" wx:key="{{index}}">
+        <image src='{{item}}' bindload='imageLoad' data-index="{{index}}" style='height:{{user.heightList[index]}};'  binderror='imgError'></image> 
+        <image class="deleteImg" src="../../image/delete.png" data-img='{{index}}' bindtap='deleteImage'></image>
+    </view>
+    <view class="uploadBtn" bindtap='chooseImages'>
+      <view>+</view>
+      上传图片
+    </view>
+  </view>
+</form>
+<view class='footerPlace'></view>
+<view class="footer">
+  <view bindtap='showCard'>
+  <image src='../../image/preview.png' class='preImg'></image>
+    预览
+  </view>
+  <view bindtap='saveCard'>保存</view>
+</view>

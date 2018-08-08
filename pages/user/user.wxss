@@ -1,0 +1,52 @@
+/**index.wxss**/
+.toolList{
+  padding-top: 10rpx;
+}
+.toolList .toolItem{
+  padding: 30rpx; 
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.toolList image{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 20rpx;
+}
+.toolList text {
+  font-size: 32rpx;
+  color: #333;
+}
+.userinfo-avatar{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx rgba(0,0,0,.05);
+  vertical-align: top;
+  float: left;
+}
+.userinfo-nickname{
+  display: block;
+  font-size: 40rpx;
+  line-height: 2;
+  color: #333;
+  padding-top: 20rpx;
+}
+.userinfo-company{
+  font-size: 28rpx;
+  color: #999;
+}
+.actionWrap navigator{
+  float: left;
+  width: 100%;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  font-size: 30rpx;
+  margin: 30rpx 0; 
+  color: #666;
+}
+.actionWrap navigator image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}

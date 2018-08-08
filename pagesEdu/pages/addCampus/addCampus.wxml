@@ -1,0 +1,32 @@
+<!--pagesEdu/pages/addCampus/addCampus.wxml-->
+<view class="subInfo">
+  <view class="subInfoItem clearfix">
+    <text class="tag need">校区名称</text>
+    <input value="" placeholder='请输入校区名称' placeholder-class='placeholder'></input>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag">排序号</text>
+    <input value="" placeholder='数字越大越靠前' placeholder-class='placeholder'></input>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag">联系人</text>
+    <input value="" placeholder-class='placeholder' placeholder='请输入联系人姓名'></input>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag">联系电话</text>
+    <input value="" placeholder='请输入联系电话' placeholder-class='placeholder'></input>
+  </view>
+  <view class="subInfoItem clearfix" bindtap='openMap'>
+    <text class="tag">地址</text>
+    <input value="" placeholder='点击定位' placeholder-class='placeholder' disabled='disabled' readonly></input>
+    <image src='../../image/location.png' ></image>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag">详细地址</text>
+    <input value="" placeholder='请输入详细地址' placeholder-class='placeholder'></input>
+  </view>
+</view>
+<view class='btnWrap'>
+  <button class='deleteBtn'>删除校区</button>
+  <button class='saveBtn'>保存</button>
+</view>

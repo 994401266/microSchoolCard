@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <navigator wx:if="{{hasCard}}" url="../mycard/mycard">编辑名片</navigator>
+    <navigator wx:else url="../mycard/mycard">创建名片</navigator>
+    <navigator  wx:if="{{hasCard}}" url="../card/card">发名片</navigator>
+    <image  wx:if="{{hasCard}}" src="../../image/code.png" class="code" bindtap='toCode'></image> 
+  </block>
+</view>
+<view class="divider"></view>
+<view class="cardList">
+  <block wx:for="{{cardList}}">
+    <text class="gottenTime">{{item.receiveTimeStr}}</text>
+    <text class="gottenFrom">{{item.type}}</text>
+    <view class="cardWrap clearfix" data-cardid="{{item.cardId}}" data-cardholderid='{{item.cardHolderId}}' bindtap='showCard'>
+      <!-- <image class="cardBG" src="../../image/cardbg.jpg"></image> -->
+      <view class="listAvatar">
+        <image src="{{item.imgUrl}}"></image>
+      </view>
+      <view class="listInfo">
+        <view class="userName">
+          {{item.name}}
+          <view class='post'>{{item.post}}</view>
+        </view>
+        <view class='text' style='margin-bottom: 20rpx;'>{{item.company}}</view>
+        <view class='text'>手机 <text class="mobile" catchtap='call' data-mobile='{{item.mobile}}'>{{item.mobile}}</text></view>
+        <text class='text' style='width: 630rpx;text-overflow: inherit;'>地址 {{item.address}}</text>
+      </view>
+      <view class='getMoreInfo' catchtap='showMore' data-index='{{index}}' wx:if="{{!item.showFlag}}">更多名片信息 <text class='arrowUp'></text></view>
+      <view class='getMoreInfo' catchtap='showMore' data-index='{{index}}' wx:if="{{item.showFlag}}">更多名片信息 <text class='arrowDown'></text></view>
+      <view class="subInfo" wx:if="{{item.showFlag}}">
+        <view>
+          <text class="tag">电话</text>
+          <text class="desText">{{item.mobile}}</text>
+          <image src='../../image/mobile.png' catchtap='call' data-mobile='{{item.mobile}}'></image>
+        </view>
+        <view>
+          <text class="tag">微信</text>
+          <text class="desText">{{item.wechat}}</text>
+          <image src='../../image/wechat.png' catchtap='copy' data-text='{{item.wechat}}'></image>
+        </view>
+        <view>
+          <text class="tag">邮箱</text>
+          <text class="desText">{{item.email}}</text>
+          <image src='../../image/email.png' catchtap='copy' data-text='{{item.email}}'></image>
+        </view>
+        <view>
+          <text class="tag">城市</text>
+          <text class="desText">{{item.city}}</text>
+          <image src='../../image/city.png' catchtap='copy' data-text='{{item.city}}'></image>
+        </view>
+
+        <!-- <text>电话：{{item.mobile}}</text>
+        <text>邮箱：{{item.email}}</text>
+        <text>地址：{{item.address}}</text> -->
+      </view>
+    </view>
+  </block>
+</view>
+<import src='../../pages/template.wxml' />
+<template is='logo'></template>

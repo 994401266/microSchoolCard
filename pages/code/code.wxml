@@ -1,0 +1,32 @@
+<view class='codeWrap'>
+  <!-- <button class='question'>?</button> -->
+  <image src='{{user.qrcodeUrl}}'></image>
+  <view class='name'>{{user.name}}</view>
+  <view class='company'>{{user.company}}</view>
+</view>
+<view class='tipsWrap'>
+  <view class='tip'>
+    <text>此名片码可印刷在</text>
+    <text>纸质名片、宣传单、海报、易拉宝等宣传册上</text>
+    <text>微信扫一扫名片即可存入通讯录</text>
+  </view>
+  <view class='buttonWrap'>
+    <button bindtap='saveCode'>保存名片码到手机</button>
+    <button bindtap='toPoster'>生成分享海报</button>
+  </view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{openSettingModal}}"></view>
+<view class="modal-dialog" wx:if="{{openSettingModal}}">
+  <view class="modal-title">保存失败</view>
+  <view class="modal-content">
+  <icon type='fail'></icon>
+    没有保存到相册的权限！
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel">取消</view>
+    <view class="btn-confirm"  bindtap="onCancel">
+      <button open-type='openSetting'>去授权</button>  
+    </view>
+  </view>
+</view>

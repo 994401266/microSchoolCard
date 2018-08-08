@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<image src='../../image/qrcode.jpg'></image>
+<view class='appName'>微校名片</view>
+<view class='version'>v 1.0.0</view>
+
+<view class='introduceWrap'></view>
+<view class='copyright'>©2018 中云智学</view>

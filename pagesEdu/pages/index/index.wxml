@@ -1,0 +1,67 @@
+<view class='eduWrap clearfix'>
+  <block>
+    <image bindtap="bindViewTap" class="eduLogo" src='../../image/slogo.png' mode="cover"></image>
+    <view class="eduName">
+      机构名称
+      <text class="eduSize">(2人)</text>
+    </view>
+    
+  </block>
+</view>
+
+<view class="divider"></view>
+
+<view class="toolList">
+  <view class='h4'>机构管理</view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolInfo.png'></image>
+      <text>基本信息</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolSet.png'></image>
+      <text>管理校区</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolAdmin.png'></image>
+      <text>管理员设置</text>
+      <view class='arrowRight'></view>
+  </view>
+</view>
+<view class="divider"></view>
+
+<view class="toolList">
+  <view class='h4'>微培训官网</view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolBanner.png'></image>
+      <text>轮播图</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolIntro.png'></image>
+      <text>学校介绍</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolFeature.png'></image>
+      <text>教学特色</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolTeacher.png'></image>
+      <text>师资介绍</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolContact.png'></image>
+      <text>联系我们</text>
+      <view class='arrowRight'></view>
+  </view>
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src='../../image/schoolCourse.png'></image>
+      <text>课程管理</text>
+      <view class='arrowRight'></view>
+  </view>
+</view>
+<button class='deleteBtn'>解散机构</button>

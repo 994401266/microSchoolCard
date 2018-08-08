@@ -1,0 +1,16 @@
+<!--getUserInfo.wxml-->
+<!--
+/*
+creator: ZHK
+powerBy: www.mzywx.com
+*/
+-->
+
+<view class="container">
+  <image src='../../image/logo.jpg' class='logo'></image>
+  <view class='h1'>微校名片</view>
+  <view class='h5'>微信登录后小程序将获取一些权限</view>
+  <view class='p'> · 获取你的公开信息（昵称、头像等）</view>
+  <!-- 去为{{appName}}授权 -->
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>
+</view>

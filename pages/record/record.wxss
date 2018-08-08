@@ -1,0 +1,55 @@
+.tag{
+  font-size: 32rpx;
+  padding: 20rpx;
+}
+.recordList{
+  margin: 20rpx;
+}
+.recordList .recordItem{
+  border: 1px solid #f1f3f5;
+  padding: 20rpx;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .15);
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+.recordList .recordLeft{
+  float: left;
+  width: 150rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recordList .recordLeft image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-top: 20rpx;
+}
+.recordList .recordRight{
+  width: 510rpx;
+  float: right;
+}
+.recordList .recordRight .time{
+  font-size: 24rpx;
+  color: #888;
+  font-weight: 400;
+  margin-top: 20rpx;
+}
+.recordList .recordRight .name{
+  margin: 25rpx 15rpx 10rpx 0;
+  font-size: 36rpx;
+}
+.recordList .recordRight .name image{
+  width: 47rpx;
+  height: 36rpx;
+  margin-top: 4rpx;
+  float: right;
+}
+.recordList .recordRight .subText{
+  font-size: 28rpx;
+  color: #666;
+  font-weight: 400;
+  height: 45rpx;
+  line-height: 45rpx;
+}

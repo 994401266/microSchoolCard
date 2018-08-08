@@ -1,0 +1,54 @@
+/**getUserInfo.wxss**/
+/*
+creator: ZHK
+powerBy: www.mzywx.com
+*/
+
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.h1{
+  padding-top: 40rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  padding-bottom: 40rpx;
+  border-bottom: 1px solid #ddd;
+  width: 90%;
+  text-align: center;
+}
+.h5{
+  width: 100%;
+  text-align: left;
+  padding-left: 120rpx;
+  color: #333;
+  font-size: 30rpx;
+  line-height: 2.5;
+  padding-top: 20rpx;
+}
+.p{
+  width: 100%;
+  text-align: left;
+  padding-left: 180rpx;
+  color: #888;
+  font-size: 30rpx;
+  line-height: 2;
+}
+button{
+  width: 60%;
+  line-height: 2;
+  background: #06d995;
+  color: #fff;
+  margin-top: 100rpx;
+}

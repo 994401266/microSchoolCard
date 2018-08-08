@@ -1,0 +1,55 @@
+/* pagesEdu/pages/schoolInfo/schoolInfo.wxss */
+.slogoWrap{
+  display: block;
+  width: 180rpx;
+  margin: 20rpx auto 10rpx; 
+  position: relative;
+}
+.slogoWrap .slogo{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 12rpx;
+}
+.slogoWrap .changeBtn{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: 15rpx;
+  left: calc(50% - 25rpx);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+}
+.slogoTips{
+  color: #666;
+  text-align: center;
+  font-size: 26rpx;
+  display: block;
+  line-height: 2;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.subInfo .subInfoItem{
+  padding: 25rpx 20rpx 15rpx 25rpx;
+  border-bottom: 1px solid #f1f3f5;
+  font-size: 30rpx;
+}
+.subInfo .subInfoItem .tag{
+  width: 160rpx;
+  float: left;
+  color: #666;
+}
+.subInfo .subInfoItem .tag.need :after{
+  content: ' *';
+  color: #ff3030;
+}
+.subInfo .subInfoItem input{
+  width: 520rpx;
+  float: right;
+  margin-top: -5rpx;
+}
+.saveBtn{
+  width: 60%;
+  line-height: 2;
+  background: #06d995;
+  color: #fff;
+  margin-top: 100rpx;
+}

@@ -1,0 +1,40 @@
+<!--pagesEdu/pages/schoolSet/schoolSet.wxml-->
+<view class='campusList'>
+  <view class='listTitle'>
+    <image src='../../image/campus.png'></image>
+    校区(2)
+  </view>
+  <view class='listItem'>
+    <view class='imgLeft'>
+      <image src='../../image/slogo.png'></image>
+    </view>
+    <view class='textCenter'>
+      <view class='orgName'>校区名称</view>
+      <view class='orgSize'>校区成员人数</view>
+    </view>
+    <view class='arrowRight'></view>
+  </view>
+</view>
+<view class='divider'></view>
+<view class='campusList employList'>
+  <view class='listTitle'>
+   <image src='../../image/employ.png'></image>
+    成员(14)
+  </view>
+  <view class='listItem'>
+    <view class='imgLeft'>
+      <image src='../../image/slogo.png'></image>
+    </view>
+    <view class='textCenter'>
+      <view class='orgName'>成员姓名</view>
+      <view class='orgSize'>成员职位</view>
+    </view>
+    <view class='editRight'>
+      <image src='../../image/edit.png'></image>
+    </view>
+  </view>
+</view>
+<view class='footer'>
+  <button>新增校区</button>
+  <button open-type='share'>新增员工</button>
+</view>

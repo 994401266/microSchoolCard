@@ -1,0 +1,63 @@
+/**index.wxss**/
+.toolList{
+  padding-bottom: 20rpx;
+}
+.toolList .toolItem{
+  padding: 20rpx; 
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  color: #666;
+  font-size: 28rpx;
+}
+.toolItem .arrowRight{
+  position: absolute;
+  width: 15rpx;
+  height: 15rpx;
+  transform: rotate(45deg);
+  border: solid #888;
+  border-width: 1px 1px 0 0;
+  right: 40rpx;
+}
+.toolList image{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 20rpx;
+}
+.toolList .h4{
+  padding: 15rpx;
+  color: #333;
+  font-size: 34rpx;
+  display: block;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 15rpx;
+  line-height: 1.8;
+}
+.eduWrap{
+  text-align: center;
+}
+.eduLogo{
+  width: 140rpx;
+  height: 140rpx;
+  box-shadow: 0 0 10rpx rgba(0,0,0,.05);
+  display: block;
+  margin: 20rpx auto;
+}
+.eduName{
+  font-size: 36rpx;
+  line-height: 2;
+  color: #333;
+}
+.eduSize{
+  font-size: 28rpx;
+  color: #666;
+}
+.deleteBtn{
+  width: 60%;
+  display: block;
+  margin: 40rpx auto;
+  background: #ff3030;
+  color: #fff;
+  line-height: 2;
+  font-size: 32rpx;
+}

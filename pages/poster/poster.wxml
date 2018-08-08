@@ -1,0 +1,42 @@
+<view class='buttomWrap'>
+  <block wx:if="{{canvasIndex}}">
+    <button bindtap='savePoster' class="savePoster">保存海报</button>
+  </block>
+  <block wx:else>
+    <button bindtap='chooseBG' class="chooseBG">
+      <image src='../../image/image.png'></image>
+      本地素材
+    </button>
+    <button bindtap='savePoster' class="savePosters">保存海报</button>
+  </block>
+</view>
+<block wx:if="{{!openSettingModal}}">
+  <view class='canvasWrap' style="height:510px;position: relative;">
+    <canvas style="width: 280px; height: 480px;left:{{canvasLeft[0]}};" canvas-id="posters"></canvas>
+    <canvas style="width: 280px; height: 480px;left:{{canvasLeft[1]}};" canvas-id="poster"></canvas>
+    <view class='dotWrap'>
+      <block wx:for="{{canvasLeft}}">
+        <view class='dot active' wx:if="{{index == canvasIndex}}"></view>
+        <view class='dot' wx:else></view>
+      </block>
+    </view>
+  </view>
+  <canvas class='cover' canvas-id="cover" bindtap='lookPost' bindtouchstart='start' bindtouchend='end'></canvas>
+</block>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{openSettingModal}}"></view>
+<view class="modal-dialog" wx:if="{{openSettingModal}}">
+  <view class="modal-title">保存失败</view>
+  <view class="modal-content">
+  <icon type='fail'></icon>
+    没有保存到相册的权限！
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel">取消</view>
+    <view class="btn-confirm"  bindtap="onCancel">
+      <button open-type='openSetting'>去授权</button>  
+    </view>
+  </view>
+</view>
+
+

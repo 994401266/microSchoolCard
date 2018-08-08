@@ -1,0 +1,27 @@
+<view class='body'>
+  <view class='recordList'>
+    <view class='recordItem clearfix' wx:for="{{recordList}}" wx:key='{{item.openId}}' data-id='{{item.visitingCard.id}}' data-wxappid='{{item.visitingCard.wxappId}}' data-cardholderid='{{item.cardHolderId}}' bindtap='toCard' data-hascard='{{item.hasCard}}' data-hascollect='{{item.hasCollect}}'>
+      <view class='recordLeft'>
+        <image src='{{item.imgUrl}}'></image>
+      </view>
+      <view class="recordRight">
+        <view class='name'>
+          {{item.name}}
+          
+          <image wx:if='{{item.hasCard && item.hasCollect}}' src="../../image/collected.png"></image>
+          <image wx:if='{{item.hasCard && !item.hasCollect}}' src="../../image/unCollect.png"></image>
+        </view>
+        <view class='time'>{{item.receiveTimeStr}} {{item.type}}</view>
+      </view>
+    </view>
+    <view class='errorWrap' wx:if='{{recordList.length == 0}}'>
+      <image src='../../image/nocontent.png' class='nocontentImg'></image>
+      <view> 
+        还没有人收藏您的名片
+      </view>
+      <view>
+        快去<navigator bindtap='sendCard'>发名片</navigator>吧
+      </view>
+    </view>
+  </view>
+</view>

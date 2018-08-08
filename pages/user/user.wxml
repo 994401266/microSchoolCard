@@ -1,0 +1,42 @@
+<view class='userWrap clearfix'>
+  <block>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-company">{{company}}</text>
+  </block>
+</view>
+<view class='actionWrap clearfix'>
+  <navigator wx:if="{{hasCard}}" url="../mycard/mycard">
+    <image src='../../image/edit.png'></image>
+    编辑名片
+  </navigator>
+  <navigator wx:else url="../mycard/mycard">
+    <image src='../../image/edit.png'></image>
+    创建名片
+  </navigator>
+</view>
+<view class="divider"></view>
+<!-- <view>
+  <navigator url='../../pagesEdu/pages/school/school'>toschool</navigator>
+</view> -->
+<view class="divider"></view>
+<view class="toolList">
+  <view class="toolItem" bindtap='toRecordPage'>
+      <image src="../../image/record.png"></image>
+      <text>谁收藏了我</text>
+  </view>
+  <navigator class="toolItem" url='../../pages/about/about'>
+      <image src="../../image/about.png"></image>
+      <text>关于我们</text>
+  </navigator> 
+   <!-- <view class="toolItem" bindtag='toBugger'>
+      <image src="../../image/bug.png"></image>
+      <text>问题反馈</text>
+  </view>
+   <view class="toolItem">
+      <image src="../../image/set.png"></image>
+      <text>设置</text>
+  </view> -->
+</view>
+<import src='../../pages/template.wxml' />
+<template is='logo'></template>
