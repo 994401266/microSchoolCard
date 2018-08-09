@@ -1,0 +1,65 @@
+
+.subInfo .subInfoItem{
+  padding: 25rpx 20rpx 15rpx 25rpx;
+  border-bottom: 1px solid #f1f3f5;
+  font-size: 30rpx;
+  position: relative;
+}
+.subInfo .subInfoItem .tag{
+  width: 160rpx;
+  float: left;
+  color: #666;
+}
+.subInfo .subInfoItem .tag.need :after{
+  content: ' *';
+  color: #ff3030;
+}
+.subInfo .subInfoItem input{
+  width: 520rpx;
+  float: right;
+  margin-top: -5rpx;
+}
+
+.subInfoItem image{
+  width: 44rpx;
+  height: 44rpx;
+  position: absolute;
+  right: 40rpx;
+  top: calc(50% - 22rpx);
+  z-index: 1;
+}
+.saveBtn{
+  width: 80%;
+  background: #06d995;
+  color: #fff;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.deleteBtn{
+  width: 80%;
+  background: #fff;
+  color: #333;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.btnWrap{
+  width: 80%;
+  margin: 80rpx auto 25rpx;
+}
+.btnWrap button{
+  width: 60%;
+  margin: 0;
+  float: right;
+  box-sizing: border-box;
+  border: 1px solid #06d995;
+  line-height: 2;
+  font-size: 32rpx;
+}
+.btnWrap button:first-of-type{
+  width: 33.3%;
+  float: left;
+  border: 1px solid #999;
+}
+.btnWrap button:after{
+  border: 0;
+}

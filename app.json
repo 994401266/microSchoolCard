@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pagesEdu/pages/addTeacher/addTeacher",
+    "pagesEdu/pages/admincChoose/admincChoose",
+    "pagesEdu/pages/campusAdd/campusAdd",
+    "pagesEdu/pages/teacherAdd/teacherAdd",
     "pagesEdu/pages/teacherSet/teacherSet",
-    "pagesEdu/pages/chooseManager/chooseManger",
     "pagesEdu/pages/adminSet/adminSet",
     "pagesEdu/pages/campusDetail/campusDetail",
     "pagesEdu/pages/schoolSet/schoolSet",
     "pagesEdu/pages/employSet/employSet",
-    "pagesEdu/pages/addCampus/addCampus",
     "pagesEdu/pages/index/index",
     "pagesEdu/pages/schoolInfo/schoolInfo",
     "pagesEdu/pages/register/register",
@@ -26,14 +26,16 @@
       "root": "pagesEdu",
       "pages": [
         "pages/teacherSet/teacherSet",
+        "pages/campusAdd/campusAdd",
+        "pages/teacherAdd/teacherAdd",
         "pages/chooseManager/chooseManager",
+        "pages/admincChoose/admincChoose",
         "pages/adminSet/adminSet",
         "pages/campusDetail/campusDetail",
         "pages/employSet/employSet",
         "pages/register/register",
         "pages/schoolInfo/schoolInfo",
         "pages/schoolSet/schoolSet",
-        "pages/addCampus/addCampus",
         "pages/index/index"
       ]
     }
