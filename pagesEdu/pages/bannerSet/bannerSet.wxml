@@ -1,0 +1,29 @@
+<!--pagesEdu/pages/bannerSet/bannerSet.wxml-->
+<view class='listTitle'>
+  <image src='../../image/teacher.png'></image>
+  轮播图(2/9)
+  <button class='titleBtn'>新增</button>
+</view>
+<swiper indicator-dots="{{true}}" class='bannerList'>
+  <!-- <swiper-item class='addWrap'>
+    <image src='../../image/bannerAdd.png'></image>
+  </swiper-item> -->
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='divider'></view>
+<swiper indicator-dots="{{true}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+     <view>标题</view>
+     <view>图片</view>
+     <view>排序</view>
+     <view>是否显示</view>
+     <view>内容描述</view>
+     
+    </swiper-item>
+  </block>
+</swiper>
