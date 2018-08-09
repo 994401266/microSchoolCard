@@ -1,22 +1,29 @@
-// pagesEdu/pages/adminSet/adminSet.js
+// pagesEdu/pages/employEdit/employEdit.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    orgIndex: '',
+    orgList: ['金水校区','二七校区','高新校区'],
+    pickerHolder: '请选择所属校区'
   },
-  changeAdmin(e){
+  bindPickerChange(e){
+    console.log(e)
+    this.setData({
+      orgIndex: e.detail.value,
+      pickerHolder: ''
+    });
+  },
+  deleteEmploy(e){
     let id = e.currentTarget.dataset.id;
     wx.showModal({
       title: '提示',
-      content: '转让管理员后，将不能...,您确定要转让吗？',
+      content: '您确定要删除该员工吗？',
       success(res){
-        if(res.confirm){
-          wx.navigateTo({
-            url: `../../pages/chooseManager/chooseManager?action=changeAdmin&id=${id}`,
-          });
+        if(res.confirm){//确定删除
+
         }
       }
     })
@@ -25,7 +32,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+  
   },
 
   /**

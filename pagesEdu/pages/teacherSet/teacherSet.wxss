@@ -1,5 +1,3 @@
-/* pagesEdu/pages/adminSet/adminSet.wxss */
-/* pagesEdu/pages/schoolSet/schoolSet.wxss */
 .campusList{
   padding-bottom: 20rpx;
 }

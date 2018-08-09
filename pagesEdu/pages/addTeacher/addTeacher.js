@@ -1,4 +1,4 @@
-// pagesEdu/pages/adminSet/adminSet.js
+// pagesEdu/pages/addTeacher/addTeacher.js
 Page({
 
   /**
@@ -7,25 +7,12 @@ Page({
   data: {
   
   },
-  changeAdmin(e){
-    let id = e.currentTarget.dataset.id;
-    wx.showModal({
-      title: '提示',
-      content: '转让管理员后，将不能...,您确定要转让吗？',
-      success(res){
-        if(res.confirm){
-          wx.navigateTo({
-            url: `../../pages/chooseManager/chooseManager?action=changeAdmin&id=${id}`,
-          });
-        }
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+  
   },
 
   /**

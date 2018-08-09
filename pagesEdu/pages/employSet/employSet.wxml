@@ -1,0 +1,30 @@
+<!--pagesEdu/pages/employEdit/employEdit.wxml-->
+<view class="subInfo">
+  <view class="subInfoItem clearfix">
+    <text class="tag need">姓名</text>
+    <input value="" placeholder='请输入校区名称' placeholder-class='placeholder'></input>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag need">手机号</text>
+    <input value="" placeholder='数字越大越靠前' placeholder-class='placeholder'></input>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag need">职位</text>
+    <input value="" placeholder-class='placeholder' placeholder='请输入联系人姓名'></input>
+  </view>
+  <view class="subInfoItem clearfix">
+    <text class="tag">所属校区</text>
+    <picker bindchange="bindPickerChange" value="{{orgIndex}}" range="{{orgList}}" placeholder-class='placeholder' placeholder='请输入联系人姓名'>
+      <view class="picker">
+          <text>{{orgList[orgIndex]}}</text>
+          <text class='placeholder'>{{pickerHolder}}</text>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='btnWrap'>
+  <button class='deleteBtn' bindtap='deleteEmploy' data-id='123132121'>删除员工</button>
+  <button class='saveBtn'>保存</button>
+</view>
+
+
