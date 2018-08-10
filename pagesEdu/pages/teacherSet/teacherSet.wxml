@@ -1,18 +1,22 @@
 <view class='campusList employList'>
+
   <view class='listTitle'>
    <image src='../../image/teacher.png'></image>
-    授课教师(2)
-    <button class='titleBtn'>新增</button>
+    授课教师({{totalCount}})
+    <button class='titleBtn' bindtap='showAdd' >新增</button>
   </view>
+  <block wx:for="{{teacherList}}">
   <view class='listItem'>
     <view class='imgLeft'>
-      <image src='../../image/slogo.png'></image>
+      <image wx:if="{{item.pic}}" src='{{item.pic}}'></image>
+      <image wx:else src='../../image/avatar.jpg'></image>
     </view>
     <view class='textCenter'>
-      <view class='orgName'>老师姓名</view>
-      <view class='orgSize'>职位</view>
+      <view class='orgName'>{{item.name}}</view>
+      <view class='orgSize'>{{item.position}}</view>
     </view>
-    <view class='arrowRight'></view>
+    <view class='arrowRight' data-teacherid='{{item.id}}' bindtap='updatePreTeacher'></view>
   </view>
+  </block>
 </view>
 

@@ -1,39 +1,42 @@
 <!--pagesEdu/pages/addCampus/addCampus.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
 <view class="subInfo">
-  <view class='slogoWrap'>
-    <image src='../../image/slogo.png' class='slogo'></image>
-    <image class="changeBtn" src="../../../image/carema.png"></image>
+  <view class='slogoWrap' bindtap='changeAvatar'>
+    <image src='{{avatar}}' class='slogo'></image>
+    <image class="changeBtn" src="{{teacherInfo.pic}}"></image>
     <text class='slogoTips'>点击图片上传老师头像</text>
   </view>
   <view class="subInfoItem clearfix">
     <text class="tag need">老师姓名</text>
-    <input value="" placeholder='请输入校区名称' placeholder-class='placeholder'></input>
+    <input name="name" value="{{teacherInfo.name}}" placeholder='请输入老师姓名' placeholder-class='placeholder'></input>
   </view>
   <view class="subInfoItem clearfix">
     <text class="tag">老师职务</text>
-    <input value="" placeholder='数字越大越靠前' placeholder-class='placeholder'></input>
+    <input name="position" value="{{teacherInfo.position}}" placeholder='请输入老师职务' placeholder-class='placeholder'></input>
   </view>
   <view class="subInfoItem clearfix">
     <text class="tag">联系电话</text>
-    <input value="" placeholder='请输入联系电话' placeholder-class='placeholder'></input>
+    <input name="phone" value="{{teacherInfo.phone}}" placeholder='请输入联系电话' placeholder-class='placeholder'></input>
   </view>
   
   <view class="subInfoItem clearfix">
     <text class="tag">老师介绍</text>
-    <textarea placeholder='请输入老师介绍' placeholder-class='placeholder'></textarea>
+    <textarea name="remark" placeholder='请输入老师介绍' placeholder-class='placeholder' value='{{teacherInfo.remark}}' ></textarea>
     <!-- <input value="" placeholder='请输入联系电话' placeholder-class='placeholder'></input> -->
   </view>
   <view class="subInfoItem clearfix">
     <text class="tag">是否上架</text>
-    <switch checked bindchange="switch1Change"/>
+    <switch wx:if="{{teacherInfo.onsale}}" name="onsale" checked bindchange="switch1Change"/>
+    <switch wx:else name="onsale" bindchange="switch1Change"/>
   </view>
   <view class="subInfoItem clearfix">
     <text class="tag">排序</text>
-    <input type='number' value="" placeholder='数字越大越靠前' placeholder-class='placeholder'></input>
+    <input name="sort" type='number' value="{{teacherInfo.sort}}" placeholder='数字越小越靠前' placeholder-class='placeholder'></input>
   </view>
 </view>
 <view class='btnWrap'>
-  <button class='deleteBtn'>删除</button>
-  <button class='saveBtn'>保存</button>
+  <button wx:if='{{teacherInfo.id}}' class='deleteBtn' data-teacherid='{{teacherInfo.id}}' bindtap='deleteTeacher'>删除</button>
+  <button formType="submit">保存</button>
 </view>
+</form>
 
